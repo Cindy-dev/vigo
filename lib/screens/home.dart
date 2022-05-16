@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const routeName = 'home';
   const HomeScreen({Key key}) : super(key: key);
 
   @override
@@ -15,7 +16,14 @@ class HomeScreen extends StatelessWidget {
           child: Image.asset('asset/image/vigo.jpeg'),
         ),
         leadingWidth: double.infinity,
-        actions: [Icon(Icons.file_copy, color: Color(0xff000000))],
+        actions: [ 
+          Container( 
+            padding: EdgeInsets.only(right: 10),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Color(0xffFFFFFF))),
+              child: Icon(Icons.account_balance_wallet_rounded, color: Color(0xff282A3A)))
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -72,13 +80,13 @@ class HomeScreen extends StatelessWidget {
             ),
             Divider(
               color: Color(0xffF3F4F8),
-            ), 
+            ),
             ListTile(
               leading: Image.asset('asset/image/Frame 51.png'),
               title: Text(
                 'darleneemily',
                 style: TextStyle(
-                    fontSize: 14, 
+                    fontSize: 14,
                     fontFamily: 'Nunito',
                     color: Color(0xff282A3A),
                     fontWeight: FontWeight.w400),
@@ -87,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                 '3 hours ago',
                 style: TextStyle(
                     fontSize: 14,
-                    fontFamily: 'Nunito', 
+                    fontFamily: 'Nunito',
                     fontWeight: FontWeight.w400),
               ),
               trailing: Icon(Icons.more_vert),
@@ -96,7 +104,7 @@ class HomeScreen extends StatelessWidget {
               color: Color(0xffF3F4F8),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0), 
+              padding: const EdgeInsets.all(10.0),
               child: Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat tristique in morbi nunc enim vitae.',
                 // textAlign: TextAlign.center,

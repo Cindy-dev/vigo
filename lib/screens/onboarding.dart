@@ -128,45 +128,51 @@ class Onboarding extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            alignment: Alignment.center,
-            margin: EdgeInsets.fromLTRB(15, 20, 12, 20),
-            height: 48,
-            width: 388,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  // Color(0xffFFFFFF),
-                  Color(0xff1FF1E3),
-                  Color(0xff8135F9),
-                ],
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, 'login'),
+            child: Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.fromLTRB(15, 20, 12, 20),
+              height: 48,
+              width: 388,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    // Color(0xffFFFFFF),
+                    Color(0xff1FF1E3),
+                    Color(0xff8135F9),
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(10),
               ),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Text(
-              'Login',
-              style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontFamily: 'Nunito',
-                  fontWeight: FontWeight.w700),
+              child: Text(
+                'Login',
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w700),
+              ),
             ),
           ),
-          Container(
-            alignment: Alignment.center,
-            margin: EdgeInsets.fromLTRB(15, 0, 12, 20),
-            height: 48,
-            width: 388,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Color(0xff8135F9), width: 2)),
-            child: Text(
-              'Sign up',
-              style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xff8135F9),
-                  fontFamily: 'Nunito',
-                  fontWeight: FontWeight.w700),
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, 'signup'),
+            child: Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.fromLTRB(15, 0, 12, 20),
+              height: 48,
+              width: 388,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Color(0xff8135F9), width: 2)),
+              child: Text(
+                'Sign up',
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xff8135F9),
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w700),
+              ),
             ),
           ),
         ],
